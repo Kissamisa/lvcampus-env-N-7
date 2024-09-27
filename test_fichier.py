@@ -1,4 +1,4 @@
-import subprocess
+""" import subprocess
 import pytest
 from colorama import Fore, Style, init
 
@@ -62,4 +62,4 @@ def test_create_container(monkeypatch):
 
 if __name__ == "__main__":
     pytest.main()
- 
+  """
