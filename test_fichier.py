@@ -41,12 +41,23 @@ def test_create_vm(monkeypatch):
     print(Fore.GREEN + "test_create_vm réussi.")
     
 def test_create_container(monkeypatch):
-    monkeypatch.setattr('subprocess.run', lambda *args, **kwargs: None)
+    class FakeCompletedProcess:
+        def __init__(self):
+            self.stdout = b"fake_container_id"
+    
+
+    monkeypatch.setattr('subprocess.run', lambda *args, **kwargs: FakeCompletedProcess())
+    
+
     inputs = iter(["ubuntu", "non"]) 
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
 
-    create_container() 
-    print(Fore.GREEN + "test_create_container réussi.")
+
+    create_container()
+
+  
+    print("test_create_container réussi.")
+
 
 
 if __name__ == "__main__":
