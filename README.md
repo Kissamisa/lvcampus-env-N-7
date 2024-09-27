@@ -10,4 +10,11 @@ MDV2025
 - Ghariani yossr
 
 ## But du script
-Ce script automatise la détection de l'OS, l'installation de VirtualBox et Docker, ainsi que la création de machines virtuelles et de conteneurs Docker.
+Le script automatise la détection du système d'exploitation et l'installation de VirtualBox et Docker. Il permet la création de machines virtuelles à partir d'images ISO et de conteneurs Docker, avec la possibilité d'attacher des volumes persistants. En intégrant des tests automatisés, le script facilite la gestion des environnements de développement, améliorant ainsi l'efficacité des développeurs et soutenant les pratiques d'intégration continue.
+
+
+
+
+
+
+
