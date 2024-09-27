@@ -1,7 +1,11 @@
 import subprocess
+import os
+import sys
 from colorama import Fore, Style, init
 
 init(autoreset=True)
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from fichier import check_virtualbox,create_vm
 
